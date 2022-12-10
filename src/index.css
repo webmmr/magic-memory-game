@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+
+body {
+  font-family: "Roboto Slab", serif;
+  background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../src/assets/21894134_2111.w030.n002.246B.p1.246.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #e9ebee;
+  text-align: center;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+button {
+  color: #e9ebee;
+  padding: 10px 20px;
+  background: transparent;
+  border: 2px solid #e9ebee;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  color: #333;
+  background: #fff;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card-grid {
+  margin: 40px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+  box-shadow: 0 0 40px -10px rgba(0,0,0,0.35);
+}
+
+.card .front {
+  position: absolute;
+  transform: rotateY(90deg);
+  transition: all 0.2s ease-in;
+}
+
+.flipped .front {
+  transform: rotateY(0);
+  transition-delay: 0.2s;
+}
+
+.card .back {
+  transition: all 0.2s ease-in;
+  transition-delay: 0.2s;
+}
+
+.flipped .back {
+  transform: rotateY(90deg);
+ transition-delay: 0s;
+}
